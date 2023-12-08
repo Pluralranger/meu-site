@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cha.css">
+    <header>
+        <h1></h1>
+    </header>
+             
+    </head>
+<body>
+    <div class="Calc01">
+    <p>Vitorias</p> 
+    <input type="number" id="vit">
+    <p>Empates</p>  
+    <input type="number" id="emp">
+    <button onclick="[calcp()]">Calcular</button>
+</div>
+<div class="Calc02">
+    <p>Saldo de gols time 1</p> 
+    <input type="number" id="sg1">
+    <p>Saldo de gols time 2</p>  
+    <input type="number" id="sg2">
+    <button onclick="[disg()]">Calcular</button>
+</div>
+        <script>
+
+            function calcp() {
+                vitorias=parseInt(document.getElementById('vit').value);
+                empates=parseInt(document.getElementById('emp').value);
+                 pontos = vitorias * 3 + empates;
+document.write("Pontuação: "+pontos);
+}
+               function disg(){
+                sg1=parseInt(document.getElementById('sg1').value);
+                sg2=parseInt(document.getElementById('sg2').value);
+                document.write(sg1-sg2+" para o time da casa")
+               } 
+        </script>
+</body>
+</html>
